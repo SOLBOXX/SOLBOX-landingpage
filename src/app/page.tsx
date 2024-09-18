@@ -37,7 +37,7 @@ const Page: React.FC = () => {
   };
 
   return (
-    <div className='mt-10 pt-10 max-w-full '>
+    <div className='mt-10 pt-10 max-w-full'>
       <div className='flex flex-col space-y-2'>
         <p className='text-base lg:text-sm font-bold text-tertiary dark:text-white border-[3px] border-primary rounded p-2 dark:border-none dark:rounded-lg dark:bg-black dark:px-4 w-fit mx-auto'>SOLBOX v1. Coming Soon</p>
         <h1 className='py-3 md:pt-4 leading-10 md:leading-[50px] font-bold text-center text-3xl lg:text-4xl text-tertiary dark:text-lightPrimary lg:w-[600px] mx-auto'>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h1>
