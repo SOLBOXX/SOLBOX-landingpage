@@ -28,15 +28,15 @@ export default function Header() {
   };
   return (
     <div className='max-w-full'>
-      <nav className='bg-primary dark:bg-black px-2 mx-auto flex flex-grow justify-between w-4/5 lg:w-2/3 rounded-lg'>
-      <i className='bx md:bx-sm bxs-color bx-spin-hover text-black dark:text-white self-center'></i>
-      <div className="flex gap-3 md:gap-4 self-center">
+      <nav className='bg-primary dark:bg-[#01124d] px-2 mx-auto flex flex-grow justify-between w-4/5 lg:w-2/3 rounded-lg drop-shadow-2xl'>
+      <i className='bx bx-sm bxs-color bx-spin-hover text-black dark:text-white self-center'></i>
+      <div className="flex gap-3 md:gap-6 self-center">
         <Link href='/' className='text-tertiary dark:text-primary font-bold text-sm md:text-base transition duration-300 ease-in-out transform hover:scale-105'>Updates</Link>
         <Link href='/' className='text-tertiary dark:text-primary font-bold text-sm md:text-base transition duration-300 ease-in-out transform hover:scale-105'>FAQ</Link>
         <Link href='/' className='text-tertiary dark:text-primary font-bold text-sm md:text-base transition duration-300 ease-in-out transform hover:scale-105'>Contact Us</Link>
       </div>
       <button onClick={toggleDarkMode} className="p-2 rounded-lg">
-        <i className={darkMode ? 'bx bx-sun text-white md:bx-sm' : 'bx bx-moon bx-sm'}></i>
+        <i className={darkMode ? 'bx bx-sun text-white bx-sm' : 'bx bx-moon bx-sm'}></i>
       </button>
       </nav>
     </div>

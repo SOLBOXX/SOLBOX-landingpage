@@ -51,12 +51,12 @@ const Page: React.FC = () => {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               placeholder="Enter your email"
-              className="border border-[#193A9F] rounded-lg p-2"
+              className="border border-[#193A9F] rounded-lg p-2 outline-none"
             />
             <select
               value={userType}
               onChange={(e) => setUserType(e.target.value)}
-              className="border border-[#193A9F] rounded-lg p-2"
+              className="border border-[#193A9F] rounded-lg p-2 outline-none"
             >
               <option value="listener">Listener</option>
               <option value="artist">Artist</option>
