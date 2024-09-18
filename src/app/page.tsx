@@ -39,9 +39,9 @@ const Page: React.FC = () => {
   return (
     <div className='mt-10 pt-10 max-w-full'>
       <div className='flex flex-col space-y-2'>
-        <p className='text-base lg:text-sm font-bold text-tertiary dark:text-white border-[3px] border-primary rounded p-2 dark:border-none dark:rounded-lg dark:bg-black dark:px-4 w-fit mx-auto'>SOLBOX v1. Coming Soon</p>
-        <h1 className='py-3 md:pt-4 leading-10 md:leading-[50px] font-bold text-center text-3xl lg:text-4xl text-tertiary dark:text-lightPrimary lg:w-[600px] mx-auto'>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h1>
-        <p className='sm:p-3 md:p-0 text-base md:text-sm text-black dark:text-white text-center'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium ipsum sapiente dolores voluptatum at, veritatis debitis saepe qui. Rerum, nemo.</p>
+        <p className='text-base lg:text-sm font-bold text-tertiary dark:text-white border-[3px] border-primary rounded p-2 dark:border-none dark:rounded-lg dark:bg-black dark:px-4 w-fit mx-auto'>SOLBOX Coming Soon</p>
+        <h1 className='py-3 md:pt-4 leading-10 md:leading-[50px] font-bold text-center text-3xl lg:text-4xl text-tertiary dark:text-lightPrimary lg:w-[600px] mx-auto'>Mint Your Music as NFTs on the Solana Blockchain with SolBox</h1>
+        <p className='sm:p-3 md:p-0 text-base md:text-sm text-black dark:text-white text-center'>Artists gain full ownership and control, while listeners enjoy enhanced privacy through decentralized, secure transactions.</p>
       </div>
       <div className="flex flex-col items-center justify-center">
         <form onSubmit={handleSubmit} className="flex flex-col mt-5">
@@ -58,9 +58,9 @@ const Page: React.FC = () => {
               onChange={(e) => setUserType(e.target.value)}
               className="border border-[#193A9F] rounded-lg p-2 outline-none"
             >
-              <option value="listener">Listener</option>
-              <option value="artist">Artist</option>
-              <option value="sponsor">Sponsor</option>
+              <option value="listener">Listeners</option>
+              <option value="artist">Artists</option>
+              <option value="sponsor">Partners/Sponsors</option>
             </select>
           </div>
           <button
