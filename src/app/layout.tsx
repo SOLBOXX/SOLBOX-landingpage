@@ -19,7 +19,7 @@ export default function RootLayout({
     <html lang="en">
       <body className="antialiased flex flex-col bg-[url('/bg.jpg')] dark:bg-[url('/darkbg.jpg')] bg-cover bg-center h-screen pt-6">
         <Header />
-        <main className="flex-grow">{children}</main> 
+        <main className="flex-grow max-w-full">{children}</main> 
         <Footer /> 
       </body>
     </html>
