@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import 'boxicons/css/boxicons.min.css';
-import Header from "@/component/Header";
+import Header from "@/context/Header";
 import Footer from "@/component/Footer";
-//import { SolanaWalletProvider } from "../context/WalletProvider";
+import { SolanaWalletProvider } from "../context/WalletProvider";
 import "./globals.css";
 
 
@@ -12,19 +12,20 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({
-  children,
+  children, 
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
     <html lang="en">
       <body className="antialiased flex flex-col bg-[url('/bg.jpg')] dark:bg-[url('/darkbg.jpg')] bg-cover bg-center min-h-screen lg:h-screen pt-6">
-        {/* <SolanaWalletProvider> */}
+        <SolanaWalletProvider> 
         <Header />
         <main className="flex-grow max-w-full">{children}</main> 
-        <Footer /> 
-        {/* </SolanaWalletProvider> */}
+        </SolanaWalletProvider>
+        <Footer />
       </body>
     </html>
   );
 }
+

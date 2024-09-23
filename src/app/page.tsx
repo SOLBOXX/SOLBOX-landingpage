@@ -2,8 +2,6 @@
 
 import React, { useState } from 'react';
 import ModalWrapper from '../component/ModalWrapper';
-//import { SolanaConnect } from '@/component/WalletConnector';
-// import { useWallet } from "@solana/wallet-adapter-react";
 
 
 const Page: React.FC = () => {
@@ -11,7 +9,7 @@ const Page: React.FC = () => {
   const [userType, setUserType] = useState('listener');
   const [showModal, setShowModal] = useState(false);
   const [submittedEmail, setSubmittedEmail] = useState('');
-  // const {connect} = useWallet()
+
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -89,10 +87,7 @@ const Page: React.FC = () => {
           <p className='text-black dark:text-white text-center font-semibold'>Join the <span className='text-tertiary dark:text-secondary font-bold'>2,000+</span> members who have already signed in</p>
         </div>
       </div>
-      {/* <div>
-      <button onClick={connect}>Connect Wallet</button>
-      <SolanaConnect />
-      </div> */}
+
     </div>
   );
 };

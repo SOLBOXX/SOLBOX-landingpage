@@ -1,12 +1,16 @@
 'use client'
+import { usePathname } from 'next/navigation';
 import Link from 'next/link'
 import React from 'react'
 import { useState, useEffect } from 'react';
+import { WalletMultiButton, WalletDisconnectButton } from '@solana/wallet-adapter-react-ui';
+
 
 export default function Header() {
+  const pathname = usePathname();
     const [darkMode, setDarkMode] = useState(false);
 
-  useEffect(() => {
+    useEffect(() => {
     const isDark = localStorage.getItem('theme') === 'dark';
     setDarkMode(isDark);
     if (isDark) {
@@ -33,12 +37,18 @@ export default function Header() {
       <div className="flex gap-3 md:gap-6 self-center">
         <Link href='/' className='text-white dark:text-primary font-bold text-sm md:text-base transition duration-300 ease-in-out transform hover:scale-105'>Updates</Link>
         <Link href='/faq' className='text-white dark:text-primary font-bold text-sm md:text-base transition duration-300 ease-in-out transform hover:scale-105'>FAQ</Link>
-        <Link href='/' className='text-white dark:text-primary font-bold text-sm md:text-base transition duration-300 ease-in-out transform hover:scale-105'>Contact Us</Link>
+        <Link href='/wallet' className='text-white dark:text-primary font-bold text-sm md:text-base transition duration-300 ease-in-out transform hover:scale-105'>Contact Us</Link>
       </div>
       <button onClick={toggleDarkMode} className="p-2 rounded-lg">
         <i className={darkMode ? 'bx bx-sun text-white bx-sm' : 'bx bx-moon bx-sm'}></i>
       </button>
       </nav>
+      {pathname === '/wallet' && (
+          <div className="flex items-center justify-center pt-20 gap-3">
+            <WalletMultiButton />
+            <WalletDisconnectButton />
+          </div>
+        )}
     </div>
   )
 }
