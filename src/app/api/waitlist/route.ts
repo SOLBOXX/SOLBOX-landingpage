@@ -1,15 +1,21 @@
+// src/app/api/waitlist/route.ts
+
 import { NextResponse } from 'next/server';
 
-const waitlist: Array<{ email: string; userType: string }> = [];
+export async function POST(request: Request) {
+  const { email } = await request.json();
 
-export async function POST(req: Request) {
-  try {
-    const { email, userType } = await req.json();
-    
-    waitlist.push({ email, userType });
-    
-    return NextResponse.json({ message: "User added to dummy waitlist", waitlist });
-  } catch (error) {
-    return NextResponse.json({ message: "Failed to add user to waitlist" }, { status: 500 });
+  const response = await fetch('https://solbox-backend-hq.onrender.com/api/v1/join-waitlist/', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({ email }), 
+  });
+
+  if (response.ok) {
+    return NextResponse.json({ success: true });
+  } else {
+    return NextResponse.json({ success: false }, { status: 500 });
   }
 }

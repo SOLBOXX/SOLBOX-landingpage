@@ -32,7 +32,7 @@ export default function Header() {
       <i className='bx bx-sm bxs-color bx-spin-hover text-black dark:text-white self-center'></i>
       <div className="flex gap-3 md:gap-6 self-center">
         <Link href='/' className='text-white dark:text-primary font-bold text-sm md:text-base transition duration-300 ease-in-out transform hover:scale-105'>Updates</Link>
-        <Link href='/' className='text-white dark:text-primary font-bold text-sm md:text-base transition duration-300 ease-in-out transform hover:scale-105'>FAQ</Link>
+        <Link href='/faq' className='text-white dark:text-primary font-bold text-sm md:text-base transition duration-300 ease-in-out transform hover:scale-105'>FAQ</Link>
         <Link href='/' className='text-white dark:text-primary font-bold text-sm md:text-base transition duration-300 ease-in-out transform hover:scale-105'>Contact Us</Link>
       </div>
       <button onClick={toggleDarkMode} className="p-2 rounded-lg">

@@ -2,11 +2,12 @@ import type { Metadata } from "next";
 import 'boxicons/css/boxicons.min.css';
 import Header from "@/component/Header";
 import Footer from "@/component/Footer";
+//import { SolanaWalletProvider } from "../context/WalletProvider";
 import "./globals.css";
 
 
 export const metadata: Metadata = {
-  title: "SOLBOXX",
+  title: "SOLBOX",
   description: "The Music App built on Blockchain",
 };
 
@@ -17,10 +18,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="antialiased flex flex-col bg-[url('/bg.png')] dark:bg-[url('/darkbg.png')]  bg-cover bg-no-repeat bg-center min-h-screen lg:h-screen pt-6">
+      <body className="antialiased flex flex-col bg-[url('/bg.jpg')] dark:bg-[url('/darkbg.jpg')] bg-cover bg-center min-h-screen lg:h-screen pt-6">
+        {/* <SolanaWalletProvider> */}
         <Header />
         <main className="flex-grow max-w-full">{children}</main> 
         <Footer /> 
+        {/* </SolanaWalletProvider> */}
       </body>
     </html>
   );
