@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import 'boxicons/css/boxicons.min.css';
-import Header from "@/context/Header";
+import Header from "@/component/Header";
 import Footer from "@/component/Footer";
 import { SolanaWalletProvider } from "../context/WalletProvider";
 import "./globals.css";
@@ -21,7 +21,7 @@ export default function RootLayout({
       <body className="antialiased flex flex-col bg-[url('/bg.jpg')] dark:bg-[url('/darkbg.jpg')] bg-cover bg-center min-h-screen lg:h-screen pt-6">
         <SolanaWalletProvider> 
         <Header />
-        <main className="flex-grow max-w-full">{children}</main> 
+        <main className="flex-grow max-w-full p-0 m-0">{children}</main> 
         </SolanaWalletProvider>
         <Footer />
       </body>

@@ -9,7 +9,7 @@ export default function WalletConnect() {
         {connected ? (
         <p>Connected to {wallet?.adapter.name}</p>
       ) : (
-        <p>Please connect your wallet</p>
+        <p className="dark:text-white">Please connect your wallet</p>
       )}
     
     </div>
